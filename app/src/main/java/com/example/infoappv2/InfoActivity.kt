@@ -10,8 +10,8 @@ class InfoActivity : AppCompatActivity() {
         listOf(
             IntroSlide(
                 "Willkommen am Campus Lingen!",
-            "Die InfoApp der Hochschule Osnabrück bietet euch alle Informationen die Ihr zum Studienstart am Campus Lingen benötigt. \" +\n" +
-                    "          \"Außerdem bieten wir euch coole Spiele die Ihr spielen könnt während Ihr in der auf dem Campus wartet.",
+            "Die InfoApp der Hochschule Osnabrück bietet euch alle Informationen die Ihr zum Studienstart am Campus Lingen benötigt." +
+                       "Außerdem bieten wir euch coole Spiele die Ihr spielen könnt während Ihr in der auf dem Campus wartet.",
                 R.drawable.hs_os
             ),
             IntroSlide(
@@ -22,7 +22,7 @@ class InfoActivity : AppCompatActivity() {
             IntroSlide(
                 "Schreibe mit Dozenten!",
                 "Um mit Dozenten schreiben zu könne muss eine Mobilfunknummer hinterlegt sein.",
-                R.drawable.ic_baseline_chat_24
+                R.drawable.ic_baseline_chat_24_white
             )
         )
     )
