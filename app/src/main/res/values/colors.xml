@@ -3,6 +3,8 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorTextPrimary">#000000</color>
+    <color name="colorTextSecondary">#222222</color>
 
     <!-- colors for button styles -->
     <color name="gradient_start_color">#28BBC8</color>
