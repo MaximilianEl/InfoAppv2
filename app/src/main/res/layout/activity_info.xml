@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/textSkipIntro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="66dp"
+        android:layout_height="24dp"
         android:layout_marginBottom="70dp"
         android:text="Skip Intro"
         android:textColor="#fff"
@@ -18,31 +18,32 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/buttonNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/colorTextPrimary"
-        android:minWidth="110dp"
-        android:text="Next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/roundedbutton"
+        android:src="@drawable/ic_baseline_arrow_forward_24"
+        android:textColor="#fff"
         android:textSize="14sp"
         android:textStyle="bold"
-        android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toEndOf="@+id/textSkipIntro"
         app:layout_constraintTop_toTopOf="@+id/textSkipIntro" />
 
     <LinearLayout
         android:id="@+id/indicatorsContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:layout_marginBottom="12dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/buttonNext"/>
+        app:layout_constraintBottom_toTopOf="@+id/buttonNext"
+        tools:layout_editor_absoluteX="-54dp" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/introSliderViewPager"

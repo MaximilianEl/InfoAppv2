@@ -11,6 +11,7 @@ class StartScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_startscreen)
+
         openInfoActivity()
     }
 
@@ -19,6 +20,6 @@ class StartScreenActivity : AppCompatActivity() {
              Intent(applicationContext, InfoActivity::class.java).also {
                  startActivity(it)
              }
-             }
+        }
     }
 }
