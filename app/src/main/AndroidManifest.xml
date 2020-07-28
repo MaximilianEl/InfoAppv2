@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<!--        <activity android:name=".InfoActivity" />-->
-        <activity android:name=".InfoActivity">
+        <activity
+            android:name=".MenuActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+         <activity android:name=".InfoActivity" />
+        <activity android:name=".StartScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
