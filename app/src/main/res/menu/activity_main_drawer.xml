@@ -3,18 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:id="@+id/nav_ehelp"
+            android:icon="@drawable/ic_baseline_local_hospital_24"
+            android:title="@string/menu_ehelp" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_campus"
+            android:icon="@drawable/ic_baseline_explore_24"
+            android:title="@string/menu_campus" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_persons"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="@string/menu_person" />
+        <item
+            android:id="@+id/nav_calender"
+            android:icon="@drawable/ic_baseline_calendar_today_24"
+            android:title="@string/menu_calender" />
+        <item
+            android:id="@+id/nav_institute"
+            android:icon="@drawable/ic_baseline_account_balance_24"
+            android:title="@string/menu_institute" />
+        <item
+            android:id="@+id/nav_courses"
+            android:icon="@drawable/ic_baseline_school_24"
+            android:title="@string/menu_courses" />
+        <item
+            android:id="@+id/nav_stops"
+            android:icon="@drawable/ic_baseline_train_24"
+            android:title="@string/menu_stops" />
     </group>
+
+    <group
+        android:id="@+id/menu_bot"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_options"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="@string/menu_options" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_baseline_email_24"
+            android:title="@string/menu_feedback" />
+        <item
+            android:id="@+id/nav_imprint"
+            android:icon="@drawable/ic_outline_info_24"
+            android:title="@string/menu_imprint" />
+    </group>
+
 </menu>
