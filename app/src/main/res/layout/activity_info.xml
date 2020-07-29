@@ -7,33 +7,14 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".InfoActivity">
 
-    <TextView
-        android:id="@+id/textSkipIntro"
-        android:layout_width="66dp"
-        android:layout_height="24dp"
-        android:layout_marginBottom="70dp"
-        android:text="Skip Intro"
-        android:textColor="#fff"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:id="@+id/buttonNext"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/roundedbutton"
-        android:src="@drawable/ic_baseline_arrow_forward_24"
-        android:textColor="#fff"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.96"
-        app:layout_constraintStart_toEndOf="@+id/textSkipIntro"
-        app:layout_constraintTop_toTopOf="@+id/textSkipIntro" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/introSliderViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/indicatorsContainer"/>
 
     <LinearLayout
         android:id="@+id/indicatorsContainer"
@@ -45,14 +26,34 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonNext"
         tools:layout_editor_absoluteX="-54dp" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/introSliderViewPager"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="12dp"
-        android:overScrollMode="never"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/indicatorsContainer" />
+    <TextView
+        android:id="@+id/textSkipIntro"
+        android:layout_width="66dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="40dp"
+        android:text="Skip Intro"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonNext"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/roundedbutton"
+        android:src="@drawable/ic_baseline_arrow_forward_24"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toEndOf="@+id/textSkipIntro"
+        app:layout_constraintTop_toTopOf="@+id/textSkipIntro" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
