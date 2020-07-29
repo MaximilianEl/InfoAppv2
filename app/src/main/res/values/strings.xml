@@ -21,4 +21,6 @@
     <string name="menu_options">Einstellungen</string>
     <string name="menu_person">Personen</string>
     <string name="menu_stops">Haltestellen</string>
+    <string name="menu_game">Spiele</string>
+    <string name="menu_news">News</string>
 </resources>

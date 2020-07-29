@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_ehelp">
+    app:startDestination="@+id/nav_news">
 
     <fragment
         android:id="@+id/nav_ehelp"
@@ -70,4 +70,16 @@
         android:name="com.example.infoappv2.ui.stops.StopsFragment"
         android:label="@string/menu_stops"
         tools:layout="@layout/fragment_stops" />
+
+    <fragment
+        android:id="@+id/nav_game"
+        android:name="com.example.infoappv2.ui.game.GameFragment"
+        android:label="@string/menu_game"
+        tools:layout="@layout/fragment_game" />
+
+    <fragment
+        android:id="@+id/nav_news"
+        android:name="com.example.infoappv2.ui.news.NewsFragment"
+        android:label="@string/menu_news"
+        tools:layout="@layout/fragment_news" />
 </navigation>

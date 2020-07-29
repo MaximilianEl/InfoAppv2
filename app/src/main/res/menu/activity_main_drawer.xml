@@ -7,6 +7,10 @@
         android:id="@+id/menu_top"
         android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_baseline_rss_feed_24"
+            android:title="@string/menu_news"/>
+        <item
             android:id="@+id/nav_ehelp"
             android:icon="@drawable/ic_baseline_local_hospital_24"
             android:title="@string/menu_ehelp" />
@@ -34,6 +38,15 @@
             android:id="@+id/nav_stops"
             android:icon="@drawable/ic_baseline_train_24"
             android:title="@string/menu_stops" />
+    </group>
+
+    <group
+        android:id="@+id/menu_mid"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_game"
+            android:icon="@drawable/ic_baseline_videogame_asset_24"
+            android:title="@string/menu_game"/>
     </group>
 
     <group
