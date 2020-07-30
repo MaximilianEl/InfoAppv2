@@ -30,28 +30,28 @@
         android:id="@+id/textSkipIntro"
         android:layout_width="66dp"
         android:layout_height="24dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="56dp"
         android:text="Skip Intro"
         android:textColor="#fff"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/buttonNext"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/roundedbutton"
         android:src="@drawable/ic_baseline_arrow_forward_24"
         android:textColor="#fff"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toEndOf="@+id/textSkipIntro"
         app:layout_constraintTop_toTopOf="@+id/textSkipIntro" />
 
