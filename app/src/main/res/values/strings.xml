@@ -23,4 +23,11 @@
     <string name="menu_stops">Haltestellen</string>
     <string name="menu_game">Spiele</string>
     <string name="menu_news">News</string>
+    
+    <string name="imprint_paragraph">Angaben gem. §5 TMG</string>
+    <string name="imprint_adress">Hochschule Osnabrück</string>
+    <string name="imprint_adress2">Management, Kultur und Technik</string>
+    <string name="imprint_adress3">University of Applied Sciences</string>
+
+    <string name="imprint_docname">Prof. Dr. Michael Ryba</string>
 </resources>

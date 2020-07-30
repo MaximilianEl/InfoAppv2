@@ -22,9 +22,9 @@ class PersonFragment : Fragment() {
         personViewModel =
             ViewModelProviders.of(this).get(PersonViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_person, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
+
         personViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+
         })
         return root
     }

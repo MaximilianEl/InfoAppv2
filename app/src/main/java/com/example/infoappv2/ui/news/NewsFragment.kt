@@ -7,7 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.infoappv2.R
+import org.jsoup.Jsoup
 
+@Suppress("UNREACHABLE_CODE")
 class NewsFragment : Fragment() {
 
     companion object {
@@ -15,6 +17,8 @@ class NewsFragment : Fragment() {
     }
 
     private lateinit var viewModel: NewsViewModel
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,4 +33,17 @@ class NewsFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
+    fun getSomeData() {
+        val url = "https://firebase.google.com/"
+        val doc = Jsoup.connect(url).get()
+
+        val title = doc.title()
+        val links = doc.select("a[href]")
+
+        println(title)
+
+        links.forEach {
+                link -> println(link.attr("href"))
+        }
+    }
 }
