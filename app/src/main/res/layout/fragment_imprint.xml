@@ -100,6 +100,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/website"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/imprint_website"
@@ -115,33 +116,37 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/facebook"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/facebook"/>
             
             <Space
-                android:layout_width="53dp"
+                android:layout_width="10dp"
                 android:layout_height="match_parent"/>
 
             <ImageView
+                android:id="@+id/insta"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/insta"/>
 
             <Space
-                android:layout_width="53dp"
+                android:layout_width="10dp"
                 android:layout_height="match_parent"/>
 
             <ImageView
+                android:id="@+id/youtube"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/youtube"/>
 
             <Space
-                android:layout_width="53dp"
+                android:layout_width="10dp"
                 android:layout_height="match_parent"/>
 
             <ImageView
+                android:id="@+id/twitter"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/twitter"/>
