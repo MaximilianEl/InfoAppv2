@@ -30,7 +30,7 @@ class InfoActivity : AppCompatActivity() {
             ),
             IntroSlide(
                 "Schreibe mit Dozenten!",
-                "Um mit Dozenten schreiben zu könne muss eine Mobilfunknummer hinterlegt sein.",
+                "Um mit Dozenten schreiben zu können muss eine Mobilfunknummer hinterlegt sein.",
                 R.drawable.ic_baseline_chat_24_white
             )
         )
