@@ -23,13 +23,13 @@
     <string name="menu_stops">Haltestellen</string>
     <string name="menu_game">Spiele</string>
     <string name="menu_news">News</string>
-    
+
     <string name="imprint_paragraph">Angaben gem. §5 TMG</string>
     <string name="imprint_hs">Hochschule Osnabrück</string>
     <string name="imprint_camp">Campus Lingen</string>
     <string name="imprint_fak">Management, Kultur und Technik</string>
     <string name="imprint_hs2">University of Applied Sciences</string>
-<!--    <string name="imprint_docname">Prof. Dr. Michael Ryba</string>-->
+    <!--    <string name="imprint_docname">Prof. Dr. Michael Ryba</string>-->
     <string name="imprint_street">Kaiserstraße 10C</string>
     <string name="imprint_plz">49809 Lingen(Ems)</string>
     <string name="imprint_data"><u>Hinweise zum Datenschutz</u></string>
@@ -38,5 +38,7 @@
     <string name="imprint_osource"><u>Open Source Libraries</u></string>
 
     <string name="imprint_website"><u>www.hs-osnabrueck.de</u></string>
-    
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
