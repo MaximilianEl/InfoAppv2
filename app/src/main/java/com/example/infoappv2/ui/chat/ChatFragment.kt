@@ -34,7 +34,7 @@ class ChatFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
-    override fun OnCreate(savedInstanceState: Bundle?, activity: AppCompatActivity){
+    /*override fun OnCreate(savedInstanceState: Bundle?, activity: AppCompatActivity){
         super.onCreate(savedInstanceState)
         activity.setContentView(R.layout.fragment_chat)
         activity.setSupportActionBar(toolbar_chat)
@@ -45,5 +45,5 @@ class ChatFragment : Fragment() {
 
         val tabLayout : TableLayout = activity.findViewById(R.id.tab_Layout)
         val viewPager : ViewPager = activity.findViewById(R.id.View_Pager)
-    }
+    }*/
 }
