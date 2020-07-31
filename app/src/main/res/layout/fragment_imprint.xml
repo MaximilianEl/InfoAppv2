@@ -64,24 +64,28 @@
         android:layout_marginStart="25dp">
 
         <TextView
+            android:id="@+id/datapriv"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/imprint_data"
             android:textColor="@color/colorPrimaryDark"/>
 
         <TextView
+            android:id="@+id/disclaimer"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/imprint_haft"
             android:textColor="@color/colorPrimaryDark"/>
 
         <TextView
+            android:id="@+id/copyright"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/imprint_uhr"
             android:textColor="@color/colorPrimaryDark"/>
 
         <TextView
+            android:id="@+id/osl"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/imprint_osource"
