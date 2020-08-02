@@ -9,6 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.infoappv2.R
+import com.example.infoappv2.ui.courses.CoursesViewModel
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_person.*
+import org.jsoup.Jsoup
+import kotlin.concurrent.thread
 
 class PersonFragment : Fragment() {
 
@@ -23,9 +28,26 @@ class PersonFragment : Fragment() {
             ViewModelProviders.of(this).get(PersonViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_person, container, false)
 
+        retrieveWebInfo()
         personViewModel.text.observe(viewLifecycleOwner, Observer {
 
         })
         return root
+    }
+
+    private fun retrieveWebInfo() {
+        thread {
+            val doc = Jsoup.connect("https://www.tutorialspoint.com/android/index.htm").get()
+
+            val imageElements = doc.getElementsByClass("img-responsive")
+            val textElements = doc.getElementsByTag("h1")
+
+            val  imageUrl = imageElements[0].absUrl("src")
+
+            this.run{
+                textTitle1.text = textElements[0].text()
+                Picasso.get().load(imageUrl).into(imgTitle)
+            }
+        }
     }
 }
