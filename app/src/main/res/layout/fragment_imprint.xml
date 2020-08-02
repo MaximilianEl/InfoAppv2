@@ -121,8 +121,8 @@
 
             <ImageView
                 android:id="@+id/facebook"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/facebook"/>
             
             <Space
@@ -131,9 +131,9 @@
 
             <ImageView
                 android:id="@+id/insta"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/insta"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/instagram"/>
 
             <Space
                 android:layout_width="10dp"
@@ -142,7 +142,7 @@
             <ImageView
                 android:id="@+id/youtube"
                 android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:src="@drawable/youtube"/>
 
             <Space
@@ -151,8 +151,8 @@
 
             <ImageView
                 android:id="@+id/twitter"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/twitter"/>
 
         </LinearLayout>
