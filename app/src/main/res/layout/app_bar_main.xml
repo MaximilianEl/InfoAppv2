@@ -22,58 +22,58 @@
 
     <include layout="@layout/content_main" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="20dp"
-        android:backgroundTint="@color/colorAccent"
-        app:fabSize="mini"
-        app:rippleColor="@color/colorAccent"
-        app:srcCompat="@drawable/youtube"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="20dp"
-        android:backgroundTint="@color/colorAccent"
-        app:fabSize="mini"
-        app:rippleColor="@color/colorAccent"
-        app:srcCompat="@drawable/facebook"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab2"
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="20dp"
-        android:backgroundTint="@color/colorAccent"
-        app:fabSize="mini"
-        app:rippleColor="@color/colorAccent"
-        app:srcCompat="@drawable/twitter"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="20dp"
-        android:backgroundTint="@color/colorAccent"
-        app:fabSize="mini"
-        app:rippleColor="@color/colorAccent"
-        app:srcCompat="@drawable/instagram"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:id="@+id/multiple_actions"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/colorAccent"
-        app:rippleColor="@color/colorAccent"
-        app:srcCompat="@drawable/ic__add_black_24dp" />
+        android:layout_gravity="bottom|end"
+        app:fab_addButtonColorNormal="@color/colorPrimaryDark"
+        app:fab_addButtonColorPressed="@color/colorPrimary">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/instagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:fab_icon="@drawable/instagram"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_colorPressed="@color/colorPrimary"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_icon="@drawable/twitter" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_icon="@drawable/facebook" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/youtube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_icon="@drawable/youtube" />
+
+
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+    
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
