@@ -18,8 +18,6 @@ class NewsFragment : Fragment() {
 
     private lateinit var viewModel: NewsViewModel
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,6 +29,8 @@ class NewsFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(NewsViewModel::class.java)
         // TODO: Use the ViewModel
+
+        getNewsData()
     }
 
     fun getSomeData() {
@@ -45,5 +45,16 @@ class NewsFragment : Fragment() {
         links.forEach {
                 link -> println(link.attr("href"))
         }
+    }
+
+    fun getNewsData() {
+
+        val url = "https://www.hs-osnabrueck.de/wir/wir-stellen-uns-vor/nachrichten/"
+        val doc = Jsoup.connect(url).get()
+
+        val div_newsitem = doc.getElementById("c18977").text()
+        println(div_newsitem)
+
+
     }
 }
