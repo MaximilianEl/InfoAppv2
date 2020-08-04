@@ -5,14 +5,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.infoappv2.R
-import com.example.infoappv2.ui.courses.CoursesViewModel
-import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.fragment_person.*
 import org.jsoup.Jsoup
 import kotlin.concurrent.thread
 
@@ -48,28 +44,32 @@ class PersonFragment : Fragment() {
             val url = "https://www.hs-osnabrueck.de/wir/fakultaeten/mkt/organisation/personen-a-z/?az=rolle:professor%2Ainnen/"
             val doc = Jsoup.connect(url).get()
 
+            val div_azitem = doc.getElementsByClass("az-item")
+
             //Variable für die For-Schleife um die genaue Länge herauszulesen
-            val div1 = doc.getElementsByClass("az-item").size
-            println("Die länge beträgt:" + div1)
+            val divlength = div_azitem.size
+            //println("Die länge beträgt:" + divlength)
 
-            val div = doc.getElementsByClass("az-list-inner-content").html()
-            val divOther = div.length
+            val div_scrollviewinfo = div_azitem.first().text()
 
+            //For-Schleife für ScrollView
+            val div_collapse = div_azitem.get(0).getElementsByClass("panel-collapse collapse")
 
-//            val imgDiv = div.getElementsByClass("image-wrapper")
-//            val genDiv = div.getElementsByClass("general-Information")
-//            val conDiv = div.getElementsByClass("contact-information")
-//
-//            val img = imgDiv.
-//            val name = genDiv.select("[itemprop=name]")
-//            val fac = genDiv.select("p")
-//            val number = conDiv.select("[itemprop=telephone]")
-//            val mail = conDiv.select("[itemprop=email]")
-//            val room = conDiv.select("[itemprop=room]")
-//            val fax = conDiv.select("[itemprop=faxNumber]")
+            val div_body = div_collapse.get(0).getElementsByClass("panel-body")
 
-//            val  imageUrl = img[0].absUrl("src")
-//
+            val div_pers = div_body.select("div.person-info").get(0).allElements.html()
+
+            //val div_main = div_pers.get(0).getElementsByClass("main-information")
+            //val div_contact = div_pers.get(0).getElementsByClass("contact-information")
+            //val div_gen = div_main.get(0).getElementsByClass("general-information")
+            //val div_gentext = div_gen.text()
+
+            println("HALLLLLLLLLLO" + div_pers)
+            println("Die länge beträgt: " + div_body)
+
+//            println("Die länge beträgt: " + div_scrollviewinfo)
+//            println("Die länge beträgt: " + div_collapse)
+
 //            this.run{
 //
 //                Picasso.get().load(imageUrl).into(persImage)
