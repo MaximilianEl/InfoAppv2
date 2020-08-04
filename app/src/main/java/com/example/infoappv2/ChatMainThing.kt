@@ -14,9 +14,10 @@ import kotlinx.android.synthetic.main.activity_chat.*
 
 class ChatMainThing : AppCompatActivity() {
 
-    fun OnCreate(
-        inflater: LayoutInflater,
-        savedInstanceState: Bundle?
+    //eine sexy 7
+
+    fun OnCreateView(
+        savedInstanceState: Bundle
     ){
         super.onCreate(savedInstanceState)
 
@@ -27,7 +28,6 @@ class ChatMainThing : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar!!.title = ""
 
-        val tabLayout : TableLayout = findViewById(R.id.tab_Layout)
         val viewPager : ViewPager = findViewById(R.id.View_Pager)
         val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
 
@@ -56,6 +56,7 @@ class ChatMainThing : AppCompatActivity() {
 
         override fun getPageTitle(position: Int): CharSequence? {
             return titles[position]
+
         }
     }
 
