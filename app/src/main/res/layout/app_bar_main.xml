@@ -24,6 +24,7 @@
 
 
 
+    <!--suppress AndroidUnresolvableTag -->
     <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,7 +32,8 @@
         android:layout_margin="16dp"
         android:layout_gravity="bottom|end"
         app:fab_addButtonColorNormal="@color/colorPrimaryDark"
-        app:fab_addButtonColorPressed="@color/colorPrimary">
+        app:fab_addButtonColorPressed="@color/colorPrimary"
+        tools:ignore="MissingClass">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/instagram"

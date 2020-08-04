@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.infoappv2.R
+import org.jsoup.Jsoup
 
 class InstituteFragment : Fragment() {
 
@@ -27,6 +28,16 @@ class InstituteFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(InstituteViewModel::class.java)
         // TODO: Use the ViewModel
+    }
+
+    fun getInsData() {
+
+        val url = "https://www.hs-osnabrueck.de/wir/fakultaeten/mkt/institute/institut-fuer-management-und-technik/#c8477468"
+        val doc = Jsoup.connect(url).get()
+
+        val div_ins = doc.getElementsByClass("col-md-24").size
+
+        println("Text? " + div_ins)
     }
 
 }

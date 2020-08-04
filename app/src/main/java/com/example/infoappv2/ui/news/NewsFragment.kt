@@ -19,32 +19,12 @@ class NewsFragment : Fragment() {
     private lateinit var viewModel: NewsViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_news, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(NewsViewModel::class.java)
-        // TODO: Use the ViewModel
-
         getNewsData()
-    }
-
-    fun getSomeData() {
-        val url = "https://firebase.google.com/"
-        val doc = Jsoup.connect(url).get()
-
-        val title = doc.title()
-        val links = doc.select("a[href]")
-
-        println(title)
-
-        links.forEach {
-                link -> println(link.attr("href"))
-        }
     }
 
     fun getNewsData() {
@@ -52,9 +32,15 @@ class NewsFragment : Fragment() {
         val url = "https://www.hs-osnabrueck.de/wir/wir-stellen-uns-vor/nachrichten/"
         val doc = Jsoup.connect(url).get()
 
-        val div_newsitem = doc.getElementById("c18977").text()
-        println(div_newsitem)
-
-
+        val div_newsitem = doc.getElementsByClass("news-list-item").html()
+        println("Du Hure" + div_newsitem)
     }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProviders.of(this).get(NewsViewModel::class.java)
+        // TODO: Use the ViewModel
+    }
+
+
 }

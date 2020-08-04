@@ -59,17 +59,6 @@ class PersonFragment : Fragment() {
 
             val div_pers = div_body.select("div.person-info").get(0).allElements.html()
 
-            //val div_main = div_pers.get(0).getElementsByClass("main-information")
-            //val div_contact = div_pers.get(0).getElementsByClass("contact-information")
-            //val div_gen = div_main.get(0).getElementsByClass("general-information")
-            //val div_gentext = div_gen.text()
-
-            println("HALLLLLLLLLLO" + div_pers)
-            println("Die länge beträgt: " + div_body)
-
-//            println("Die länge beträgt: " + div_scrollviewinfo)
-//            println("Die länge beträgt: " + div_collapse)
-
 //            this.run{
 //
 //                Picasso.get().load(imageUrl).into(persImage)

@@ -40,5 +40,7 @@
     <string name="imprint_website"><u>www.hs-osnabrueck.de</u></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <string name="ins_header">Über das Institut</string>
 
 </resources>
