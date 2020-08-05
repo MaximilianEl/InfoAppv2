@@ -31,34 +31,34 @@ class InstituteFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        getInsData()
+//        getInsData()
     }
 
-    fun getInsData() {
-        thread {
-            val url = "https://www.hs-osnabrueck.de/wir/fakultaeten/mkt/institute/institut-fuer-management-und-technik/"
-            val doc = Jsoup.connect(url).get()
-            val div_instext = doc.getElementsByClass("col-md-24")
-
-            //For-Schleife eventuell?
-            //val div_psize = div_instext.select("p").size
-            //println(div_psize)
-
-            val div_pOne = div_instext.select("p")[0].text()
-            //println(div_pOne)
-            val div_pTwo = div_instext.select("p")[1].text()
-            //println(div_pTwo)
-            val div_pThree = div_instext.select("p")[2].text()
-            //println(div_pThree)
-            val div_pFour = div_instext.select("p")[3].text()
-            //println(div_pFour)
-
-            val div_Text = div_pOne + div_pTwo + div_pThree + div_pFour
-            println(div_Text)
-
-            this.run {
-                insText.text = div_Text
-            }
-        }
-    }
+//    fun getInsData() {
+//        thread {
+//            val url = "https://www.hs-osnabrueck.de/wir/fakultaeten/mkt/institute/institut-fuer-management-und-technik/"
+//            val doc = Jsoup.connect(url).get()
+//            val div_instext = doc.getElementsByClass("col-md-24")
+//
+//            //For-Schleife eventuell?
+//            //val div_psize = div_instext.select("p").size
+//            //println(div_psize)
+//
+//            val div_pOne = div_instext.select("p")[0].text()
+//            //println(div_pOne)
+//            val div_pTwo = div_instext.select("p")[1].text()
+//            //println(div_pTwo)
+//            val div_pThree = div_instext.select("p")[2].text()
+//            //println(div_pThree)
+//            val div_pFour = div_instext.select("p")[3].text()
+//            //println(div_pFour)
+//
+//            val div_Text = div_pOne + div_pTwo + div_pThree + div_pFour
+//            println(div_Text)
+//
+//            this.run {
+//                insText.text = div_Text
+//            }
+//        }
+//    }
 }
