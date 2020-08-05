@@ -14,8 +14,6 @@ import kotlinx.android.synthetic.main.activity_chat.*
 
 class ChatMainThing : AppCompatActivity() {
 
-    //eine sexy 7
-
     fun OnCreateView(
         savedInstanceState: Bundle
     ){
@@ -56,8 +54,6 @@ class ChatMainThing : AppCompatActivity() {
 
         override fun getPageTitle(position: Int): CharSequence? {
             return titles[position]
-
         }
     }
-
 }
