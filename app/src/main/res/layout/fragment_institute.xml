@@ -24,39 +24,10 @@
         android:layout_height="10dp"/>
 
     <TextView
+        android:id="@+id/insText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:textAlignment="center"
-        android:text="First Text"/>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="5dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="Second Text"/>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="5dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="Third Text"/>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="5dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="Fourth Text"/>
+        android:text="Text"/>
 
 </LinearLayout>

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.infoappv2.R
 import org.jsoup.Jsoup
+import kotlin.concurrent.thread
 
 @Suppress("UNREACHABLE_CODE")
 class NewsFragment : Fragment() {
@@ -24,23 +25,21 @@ class NewsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_news, container, false)
-        getNewsData()
-    }
-
-    fun getNewsData() {
-
-        val url = "https://www.hs-osnabrueck.de/wir/wir-stellen-uns-vor/nachrichten/"
-        val doc = Jsoup.connect(url).get()
-
-        val div_newsitem = doc.getElementsByClass("news-list-item").html()
-        println("Du Hure" + div_newsitem)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(NewsViewModel::class.java)
-        // TODO: Use the ViewModel
+        getNewsData()
     }
 
+    fun getNewsData() {
+        thread {
+            val url = "https://www.hs-osnabrueck.de/wir/wir-stellen-uns-vor/nachrichten/"
+            val doc = Jsoup.connect(url).get()
 
+            val div_newsitem = doc.getElementsByClass("news-list-item").html()
+            println("Du Hure" + div_newsitem)
+        }
+    }
 }
