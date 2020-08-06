@@ -11,8 +11,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
 import com.example.infoappv2.R
-import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.*
+import kotlinx.android.synthetic.main.fragment_institute.*
+
+//Das Tutorial was ich benutzt habe (ab Minute 9:30 geht das mit der Mainactivity los oder hier InstituteFragment
+//https://www.youtube.com/watch?v=SWEqYNbURCg&t=623s
+//alles was bei dem Kerl unter Parse irgendwas steht ist bei uns irgendwas mit Institute
 
 class InstituteFragment : Fragment() {
 
@@ -26,16 +29,18 @@ class InstituteFragment : Fragment() {
         instituteViewModel =
             ViewModelProviders.of(this).get(InstituteViewModel::class.java)
 
-        private val progressbar: ProgressBar = findViewbyId(R.id.progressbar);
-        private val recyclerview: RecyclerView;
+
+
+        private val progressbar: ProgressBar = progressbar;
+        private val recyclerview: RecyclerView = recyclerview;
         private var adapter: InstituteAdapter;
         private var Instituteitems = ArrayList<InstituteItem>();
 
-        recyclerview = findViewById(R.id.recyclerview);
 
 
         return inflater.inflate(R.layout.fragment_institute, container, false)
     }
+
 
     @SuppressLint("ResourceType")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -44,11 +49,6 @@ class InstituteFragment : Fragment() {
 //        getInsData()
     }
 
-    private class Content : AsyncTask<Void, Void, Void> {
-
-
-
-    }
 
 //    fun getInsData() {
 //        thread {
