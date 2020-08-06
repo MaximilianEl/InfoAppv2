@@ -8,6 +8,5 @@ class InstituteItem {
         this.imgURL = imgURL;
         this.title = title;
     }
-
 }
 

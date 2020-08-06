@@ -23,7 +23,7 @@ class InstituteAdapter : RecyclerView.Adapter<InstituteAdapter.ViewHolder> {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InstituteAdapter.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_institute, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.parseitem, parent, false)
         return ViewHolder(view);
     }
 

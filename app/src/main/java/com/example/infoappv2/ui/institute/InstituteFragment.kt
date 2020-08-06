@@ -1,16 +1,18 @@
 package com.example.infoappv2.ui.institute
 
 import android.annotation.SuppressLint
+import android.os.AsyncTask
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.RecyclerView
 import com.example.infoappv2.R
-import kotlinx.android.synthetic.main.fragment_institute.*
-import org.jsoup.Jsoup
-import kotlin.concurrent.thread
+import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.*
 
 class InstituteFragment : Fragment() {
 
@@ -23,8 +25,16 @@ class InstituteFragment : Fragment() {
     ): View? {
         instituteViewModel =
             ViewModelProviders.of(this).get(InstituteViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_institute, container, false)
-        return root
+
+        private val progressbar: ProgressBar = findViewbyId(R.id.progressbar);
+        private val recyclerview: RecyclerView;
+        private var adapter: InstituteAdapter;
+        private var Instituteitems = ArrayList<InstituteItem>();
+
+        recyclerview = findViewById(R.id.recyclerview);
+
+
+        return inflater.inflate(R.layout.fragment_institute, container, false)
     }
 
     @SuppressLint("ResourceType")
@@ -32,6 +42,12 @@ class InstituteFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
 //        getInsData()
+    }
+
+    private class Content : AsyncTask<Void, Void, Void> {
+
+
+
     }
 
 //    fun getInsData() {
