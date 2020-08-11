@@ -15,62 +15,54 @@
         android:contentDescription="TODO"
         tools:ignore="ContentDescription,HardcodedText" />
 
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/ins_header"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:textAlignment="center"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ins_header"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/insText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Text"
+                tools:ignore="HardcodedText"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/ins_header2"/>
+
+            <ExpandableListView
+                android:id="@+id/expandable_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+            </ExpandableListView>
 
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/insText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="Text"
-        tools:ignore="HardcodedText" />
-
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp"/>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:text="@string/ins_header2"/>
-
-
-     <Space
-         android:layout_width="match_parent"
-         android:layout_height="10dp"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent" />
-
-    <ProgressBar
-        android:id="@+id/progressbar"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:indeterminate="true"
-        android:visibility="gone"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+    </ScrollView>
 
 </LinearLayout>
