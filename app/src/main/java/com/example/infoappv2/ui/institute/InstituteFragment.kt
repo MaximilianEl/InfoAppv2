@@ -30,12 +30,10 @@ class InstituteFragment : Fragment() {
             ViewModelProviders.of(this).get(InstituteViewModel::class.java)
 
 
-
-        private val progressbar: ProgressBar = progressbar;
-        private val recyclerview: RecyclerView = recyclerview;
-        private var adapter: InstituteAdapter;
-        private var Instituteitems = ArrayList<InstituteItem>();
-
+//        private val progressbar: ProgressBar = progressbar;
+//        private val recyclerview: RecyclerView = recyclerview;
+//        private var adapter: InstituteAdapter;
+//        private var Instituteitems = ArrayList<InstituteItem>();
 
 
         return inflater.inflate(R.layout.fragment_institute, container, false)
