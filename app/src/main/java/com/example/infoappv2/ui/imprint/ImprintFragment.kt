@@ -9,12 +9,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.replace
+import androidx.core.os.bundleOf
 import com.example.infoappv2.R
-import com.example.infoappv2.ui.copyright.CopyrightFragment
-import com.example.infoappv2.ui.dataprivacy.DataPrivacyFragment
-import com.example.infoappv2.ui.disclaimer.DisclaimerFragment
-import com.example.infoappv2.ui.osl.OSLFragment
 import kotlinx.android.synthetic.main.fragment_imprint.*
 
 class ImprintFragment : Fragment() {
@@ -61,29 +57,11 @@ class ImprintFragment : Fragment() {
             startActivity(i)
         }
 
-        disclaimer.setOnClickListener {
-           val i = Intent(activity, DisclaimerFragment.javaClass)
-            startActivity(i)
-        }
-
-        osl.setOnClickListener {
-            val i = Intent(activity, OSLFragment.javaClass)
-            startActivity(i)
-        }
-
-        datapriv.setOnClickListener {
-            val i = Intent(activity, DataPrivacyFragment.javaClass)
-            startActivity(i)
-        }
-
-        copyright.setOnClickListener {
-            val i = Intent(activity, CopyrightFragment.javaClass)
-            startActivity(i)
+        datapriv.setOnClickListener{
+            val result = "result"
         }
 
         viewModel = ViewModelProviders.of(this).get(ImprintViewModel::class.java)
         // TODO: Use the ViewModel
-
     }
-
 }

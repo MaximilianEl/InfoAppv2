@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/nav_ehelp"
-        android:name="com.example.infoappv2.ui.campus.CampusFragment"
+        android:name="com.example.infoappv2.ui.help.EhelpFragment"
         android:label="@string/menu_ehelp"
         tools:layout="@layout/fragment_campus" />
 
     <fragment
         android:id="@+id/nav_campus"
-        android:name="com.example.infoappv2.ui.help.EhelpFragment"
+        android:name="com.example.infoappv2.ui.campus.CampusFragment"
         android:label="@string/menu_campus"
         tools:layout="@layout/fragment_ehelp" />
 
