@@ -1,5 +1,6 @@
 package com.example.infoappv2.ui.help
 
+import android.app.Activity
 import android.os.AsyncTask
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.loader.content.AsyncTaskLoader
+import com.example.infoappv2.MenuActivity
 import com.example.infoappv2.R
 import com.example.infoappv2.ui.feedback.FeedbackFragment
 import com.example.infoappv2.ui.feedback.FeedbackViewModel
@@ -62,9 +64,9 @@ class EhelpFragment : Fragment() {
             val title = doc.getElementsByTag("h2")
             println(title[1])
 
-//            kotlin.run {
-//                ehelp_mainheader.text = title[]
-//            }
+            activity?.runOnUiThread(){
+                ehelp_mainheader.text = title[1].text()
+            }
 
         }
     }

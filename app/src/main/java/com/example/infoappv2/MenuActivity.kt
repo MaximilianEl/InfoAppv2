@@ -73,8 +73,6 @@ class MenuActivity : AppCompatActivity() {
             i.data = Uri.parse(url)
             startActivity(i)
         })
-
-        getSomeData()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -87,19 +85,5 @@ class MenuActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
-
-    fun getSomeData() {
-        thread {
-            val url = "https://www.hs-osnabrueck.de/wir/fakultaeten/mkt/institute/institut-fuer-management-und-technik/erstsemesterinformationen/"
-            val doc = Jsoup.connect(url).get()
-
-            val title = doc.getElementsByTag("h2")
-            println(title.text())
-
-            kotlin.run {
-                ehelp_mainheader.text = title.text()
-            }
-        }.start()
     }
 }
