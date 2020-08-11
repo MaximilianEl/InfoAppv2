@@ -62,10 +62,21 @@ class EhelpFragment : Fragment() {
             val doc = Jsoup.connect(url).get()
 
             val title = doc.getElementsByTag("h2")
-            println(title[1])
+            println(title)
+
+            val text = doc.getElementsByTag("p")
+            println(text.get(0))
 
             activity?.runOnUiThread(){
                 ehelp_mainheader.text = title[1].text()
+                ehelp_firsttext.text = text[0].text()
+                ehelp_secondheader.text = title[2].text()
+                ehelp_secondtext.text = text[1].text()
+                ehelp_thirdtext.text = text[2].text()
+                ehelp_fourthtext.text = text[3].text()
+                ehelp_fifthtext.text = text[4].text()
+                ehelp_sixthtext.text = text[5].text()
+                ehelp_seventhtext.text = text[6].text()
             }
 
         }
