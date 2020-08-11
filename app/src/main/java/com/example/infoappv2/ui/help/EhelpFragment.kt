@@ -1,5 +1,7 @@
 package com.example.infoappv2.ui.help
 
+
+import android.os.AsyncTask
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +11,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.example.infoappv2.R
 import kotlinx.android.synthetic.main.fragment_ehelp.*
 import org.jsoup.Jsoup
+import org.jsoup.select.Elements
 import kotlin.concurrent.thread
 
 @Suppress("UNREACHABLE_CODE")
@@ -32,17 +35,30 @@ class EhelpFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(EhelpViewModel::class.java)
 
-        getEHelpData()
+        getSomeData()
     }
 
-    fun getEHelpData() {
+    private class Content : AsyncTask<Void, Void, Void>() {
+
+        override fun onPreExecute() {
+            super.onPreExecute()
+
+        }
+
+        override fun doInBackground(vararg p0: Void?): Void {
+            TODO("Not yet implemented")
+        }
+    }
+
+    fun getSomeData() {
         thread {
             val url = "https://www.hs-osnabrueck.de/wir/fakultaeten/mkt/institute/institut-fuer-management-und-technik/erstsemesterinformationen/"
             val doc = Jsoup.connect(url).get()
 
+            val links: Elements = doc.select("a[href]")
+
             val title = doc.getElementsByTag("h2")
             println(title)
-
 
             val text = doc.getElementsByTag("p")
             println(text.get(0))
@@ -61,12 +77,12 @@ class EhelpFragment : Fragment() {
 
                 ehelp_firsttext.text = text[0].text()
                 ehelp_secondtext.text = text[1].text()
+
                 ehelp_thirdtext.text = text[3].text()
                 ehelp_fourthtext.text = text[5].text()
                 ehelp_fifthtext.text = text[7].text()
                 ehelp_sixthtext.text = text[9].text()
                 ehelp_seventhtext.text = text[12].text()
-
             }
 
         }
