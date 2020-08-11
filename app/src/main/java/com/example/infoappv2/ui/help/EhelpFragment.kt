@@ -64,19 +64,30 @@ class EhelpFragment : Fragment() {
             val title = doc.getElementsByTag("h2")
             println(title)
 
+
             val text = doc.getElementsByTag("p")
             println(text.get(0))
 
+            val strongtext = doc.select("strong")
+            println(strongtext)
+
             activity?.runOnUiThread(){
                 ehelp_mainheader.text = title[1].text()
-                ehelp_firsttext.text = text[0].text()
                 ehelp_secondheader.text = title[2].text()
+                ehelp_headertpo.text = strongtext[17].text()
+                ehelp_headertptw.text = strongtext[18].text()
+                ehelp_headertpth.text = strongtext[19].text()
+                ehelp_headertpfou.text = strongtext[20].text()
+                ehelp_headertpfith.text = strongtext[21].text()
+
+                ehelp_firsttext.text = text[0].text()
                 ehelp_secondtext.text = text[1].text()
-                ehelp_thirdtext.text = text[2].text()
-                ehelp_fourthtext.text = text[3].text()
-                ehelp_fifthtext.text = text[4].text()
-                ehelp_sixthtext.text = text[5].text()
-                ehelp_seventhtext.text = text[6].text()
+                ehelp_thirdtext.text = text[3].text()
+                ehelp_fourthtext.text = text[5].text()
+                ehelp_fifthtext.text = text[7].text()
+                ehelp_sixthtext.text = text[9].text()
+                ehelp_seventhtext.text = text[12].text()
+
             }
 
         }
