@@ -38,18 +38,6 @@ class EhelpFragment : Fragment() {
         getSomeData()
     }
 
-    private class Content : AsyncTask<Void, Void, Void>() {
-
-        override fun onPreExecute() {
-            super.onPreExecute()
-
-        }
-
-        override fun doInBackground(vararg p0: Void?): Void {
-            TODO("Not yet implemented")
-        }
-    }
-
     fun getSomeData() {
         thread {
             val url = "https://www.hs-osnabrueck.de/wir/fakultaeten/mkt/institute/institut-fuer-management-und-technik/erstsemesterinformationen/"
