@@ -69,10 +69,8 @@ class InstituteFragment : Fragment() {
             val doc = Jsoup.connect(url).get()
 
             val text = doc.getElementsByTag("p")
-            println(text)
 
             val header = doc.select("a[data-toggle]")
-            println(header)
 
             val firsttext = text[0].text()
             val secondtext = text[1].text()
