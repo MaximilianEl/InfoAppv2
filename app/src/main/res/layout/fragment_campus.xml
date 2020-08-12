@@ -33,6 +33,52 @@
                 android:textSize="18sp"
                 android:textAlignment="center"/>
 
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:background="#B6B5B5">
+
+                <TextView
+                    android:id="@+id/camp_firstdrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/camp_firstdroptext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/camp_site"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/camp_site"
+                android:textColor="#fff"
+                android:background="@color/design_default_color_primary_dark"/>
+
+            <Button
+                android:id="@+id/camp_building"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/design_default_color_primary_dark"
+                android:textColor="#fff"
+                android:text="@string/camp_building"/>
+
             <TextView
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"

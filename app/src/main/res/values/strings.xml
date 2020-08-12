@@ -56,5 +56,7 @@
     <string name="camp_img8">Unser Campus von innen</string>
     <string name="camp_archLin">Stadtarchiv Lingen</string>
     <string name="camp_his">Geschichte des Campus Lingen</string>
+    <string name="camp_building">Gebäudeplan</string>
+    <string name="camp_site">Lageplan</string>
 
 </resources>
