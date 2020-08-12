@@ -38,9 +38,11 @@ class InstituteFragment : Fragment() {
 
         ins_header2.setOnClickListener {
             if (ins_secondtext.length() <= 0 ) {
+                ins_header2.setCompoundDrawablesWithIntrinsicBounds(0,0, R.drawable.ic_baseline_keyboard_arrow_up_24, 0)
                 ins_secondtext.visibility = VISIBLE
                 fillTextTwo()
             } else {
+                ins_header2.setCompoundDrawablesWithIntrinsicBounds(0,0, R.drawable.ic_baseline_keyboard_arrow_down_24, 0)
                 ins_secondtext.text = ""
                 ins_secondtext.visibility = GONE
             }
@@ -48,9 +50,11 @@ class InstituteFragment : Fragment() {
 
         ins_header3.setOnClickListener {
             if (ins_thirdtext.length() <= 0 ) {
+                ins_header3.setCompoundDrawablesWithIntrinsicBounds(0,0, R.drawable.ic_baseline_keyboard_arrow_up_24, 0)
                 ins_thirdtext.visibility = VISIBLE
                 fillTextThree()
             } else {
+                ins_header3.setCompoundDrawablesWithIntrinsicBounds(0,0, R.drawable.ic_baseline_keyboard_arrow_down_24, 0)
                 ins_thirdtext.text = ""
                 ins_thirdtext.visibility = GONE
             }
