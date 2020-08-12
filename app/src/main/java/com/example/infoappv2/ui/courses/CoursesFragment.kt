@@ -1,13 +1,22 @@
 package com.example.infoappv2.ui.courses
 
+import android.content.Intent
+import android.net.Uri
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.SpannedString
+import android.text.style.ClickableSpan
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
 import com.example.infoappv2.R
 import kotlinx.android.synthetic.main.fragment_courses.*
+import kotlinx.android.synthetic.main.nav_header_main.*
 import org.jsoup.Jsoup
 import kotlin.concurrent.thread
 
@@ -35,6 +44,26 @@ class CoursesFragment : Fragment() {
             if (cour_firstext.visibility == View.GONE ) {
                 cour_header1.setCompoundDrawablesWithIntrinsicBounds(0,0, R.drawable.ic_baseline_keyboard_arrow_up_24, 0)
                 cour_firstext.visibility = View.VISIBLE
+
+                cour_firstext.setOnClickListener{
+                    val openURL = Intent(Intent.ACTION_VIEW)
+                    openURL.data = Uri.parse("https://www.hs-osnabrueck.de/studium/studienangebot/bachelor/allgemeiner-maschinenbau-bsc-standort-lingen-ems/")
+                    startActivity(openURL)}
+//
+//                val styledStringA = SpannableString(
+//                    "Informationsseite "
+//                )
+//
+//                val clickableSpanA = object : ClickableSpan() {
+//                    override fun onClick(widget: View) {
+//                        val openURL = Intent(Intent.ACTION_VIEW)
+//                        openURL.data = Uri.parse("https://www.tutorialkart.com/")
+//                        startActivity(openURL)
+//                    }
+//                }
+//
+//                styledStringA.setSpan(clickableSpanA, 0, 17, 0)
+
             } else {
                 cour_header1.setCompoundDrawablesWithIntrinsicBounds(0,0, R.drawable.ic_baseline_keyboard_arrow_down_24, 0)
                 cour_firstext.visibility = View.GONE
@@ -100,18 +129,17 @@ class CoursesFragment : Fragment() {
                 cour_seventhtext.visibility = View.GONE
             }
         }
+
     }
 
     fun getInsData() {
         thread {
-            val url =
-                "https://www.hs-osnabrueck.de/wir/fakultaeten/mkt/institute/institut-fuer-management-und-technik/studiengaenge/"
+            val url = "https://www.hs-osnabrueck.de/wir/fakultaeten/mkt/institute/institut-fuer-management-und-technik/studiengaenge/"
             val doc = Jsoup.connect(url).get()
 
             val text = doc.select("h2[class='hsos-title-separator']")
 
             val header = doc.select("span[class='az-item-title']")
-
 
             activity?.runOnUiThread() {
                 courheader.text = text.text()
