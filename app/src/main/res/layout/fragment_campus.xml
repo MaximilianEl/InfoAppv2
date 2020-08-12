@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".ui.campus.CampusFragment">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,6 +16,31 @@
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/camp_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/camp_firsttext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/camp_his"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
             <ImageView
                 android:id="@+id/camp_img1"
@@ -182,7 +208,6 @@
                 android:textColor="#fff"
                 android:text="@string/camp_img8"
                 android:background="@color/design_default_color_primary_dark"/>
-
 
         </LinearLayout>
 
