@@ -53,13 +53,76 @@
                 android:textStyle="bold"
                 android:text="@string/ins_header2"/>
 
-            <ExpandableListView
-                android:id="@+id/expandable_list"
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#B6B5B5"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/ins_header1"
+                    android:layout_width="match_parent"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/ins_firstext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
 
 
-            </ExpandableListView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#B6B5B5"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/ins_header2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/ins_secondtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#B6B5B5"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/ins_header3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/ins_thirdtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
 
         </LinearLayout>
 
