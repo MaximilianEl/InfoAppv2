@@ -34,7 +34,7 @@
                 android:textAlignment="center"/>
 
             <LinearLayout
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
@@ -47,19 +47,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:textStyle="bold"
                     android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/camp_firstdroptext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="18sp"
                     android:visibility="gone" />
 
             </LinearLayout>
 
             <Button
                 android:id="@+id/camp_site"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
@@ -80,7 +82,7 @@
                 android:text="@string/camp_building"/>
 
             <TextView
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/camp_his"
