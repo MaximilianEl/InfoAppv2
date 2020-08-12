@@ -1,7 +1,5 @@
 package com.example.infoappv2.ui.help
 
-
-import android.os.AsyncTask
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -46,13 +44,10 @@ class EhelpFragment : Fragment() {
             val links: Elements = doc.select("a[href]")
 
             val title = doc.getElementsByTag("h2")
-            println(title)
 
             val text = doc.getElementsByTag("p")
-            println(text.get(0))
 
             val strongtext = doc.select("strong")
-            println(strongtext)
 
             activity?.runOnUiThread(){
                 ehelp_mainheader.text = title[1].text()
@@ -65,14 +60,12 @@ class EhelpFragment : Fragment() {
 
                 ehelp_firsttext.text = text[0].text()
                 ehelp_secondtext.text = text[1].text()
-
                 ehelp_thirdtext.text = text[3].text()
                 ehelp_fourthtext.text = text[5].text()
                 ehelp_fifthtext.text = text[7].text()
                 ehelp_sixthtext.text = text[9].text()
                 ehelp_seventhtext.text = text[12].text()
             }
-
         }
     }
 }

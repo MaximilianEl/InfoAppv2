@@ -57,7 +57,7 @@ class CoursesFragment : Fragment() {
 //                val clickableSpanA = object : ClickableSpan() {
 //                    override fun onClick(widget: View) {
 //                        val openURL = Intent(Intent.ACTION_VIEW)
-//                        openURL.data = Uri.parse("https://www.tutorialkart.com/")
+//                        openURL.data = Uri.parse("https://www.hs-osnabrueck.de/studium/studienangebot/bachelor/allgemeiner-maschinenbau-bsc-standort-lingen-ems/")
 //                        startActivity(openURL)
 //                    }
 //                }
