@@ -1,25 +1,21 @@
 package com.example.infoappv2;
 
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import java.util.*;
-import kotlin.concurrent.schedule;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import java.util.Timer;
 
-class StartScreenActivity extends AppCompatActivity {
+public final class StartScreenActivity extends AppCompatActivity {
 
-        override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_startscreen)
-
-        openInfoActivity()
+        protected void onCreate(@Nullable Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                this.setContentView(R.layout.activity_startscreen);
+                this.openInfoActivity();
         }
 
-private fun openInfoActivity() {
-        Timer().schedule(3000){
-        Intent(applicationContext, KotInfoActivity::class.java).also {
-        startActivity(it)
+        private void openInfoActivity() {
+                Timer var1 = new Timer();
+                var1.schedule(getApplicationContext(startActivity(Intent())), 3000);
         }
-        }
-        }
-        }
+}

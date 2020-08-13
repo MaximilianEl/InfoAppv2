@@ -1,42 +1,61 @@
 package com.example.infoappv2;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class IntroSlideAdapter(private val introSlides: List<KotIntroSlide>):
-        RecyclerView.Adapter<KotIntroSlideAdapter.IntroSlideViewHolder>() {
+import org.jetbrains.annotations.NotNull;
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IntroSlideViewHolder {
-        return IntroSlideViewHolder(
-        LayoutInflater.from(parent.context).inflate(
-        R.layout.slide_item_container,
-        parent,
-        false
-        )
-        )
-        }
+import java.util.List;
 
-        override fun getItemCount(): Int {
-        return introSlides.size
-        }
+import kotlin.jvm.internal.Intrinsics;
 
-        override fun onBindViewHolder(holder: IntroSlideViewHolder, position: Int) {
-        holder.bind(introSlides[position])
+public class IntroSlideAdapter extends RecyclerView {
+        private List introSlides;
+
+        @Override
+        onCreateViewHolder(@NotNull ViewGroup parent, int viewType) {
+                Intrinsics.checkParameterIsNotNull(parent, "parent");
+                View var10003 = LayoutInflater.from(parent.getContext()).inflate(1300124, parent, false);
+                Intrinsics.checkExpressionValueIsNotNull(var10003, "LayoutInflater.from(pare…      false\n            )");
+                new IntroSlideViewHolder(var10003);
         }
 
-        inner class IntroSlideViewHolder(view: View) : RecyclerView.ViewHolder(view){
-private val textTitle = view.findViewById<TextView>(R.id.textTitle)
-private val textDescription = view.findViewById<TextView>(R.id.textDescription)
-private val imageIcon = view.findViewById<ImageView>(R.id.imageSlideIcon)
+        public IntroSlideAdapter(@NonNull Context context, List introSlides) {
+                super(context);
+                this.introSlides = introSlides;
+        }
 
-        fun bind(introSlide: KotIntroSlide) {
-        textTitle.text = introSlide.title
-        textDescription.text = introSlide.description
-        imageIcon.setImageResource(introSlide.icon)
+        public int getItemCount(){
+                return this.introSlides.size();
         }
+
+        public void onBindViewHolder(IntroSlideViewHolder holder, int position) {
+                holder.bind(IntroSlide.get(position));
         }
+
+        public class IntroSlideViewHolder extends RecyclerView.ViewHolder {
+                private String textTitle;
+                private TextView textDescription;
+                private final ImageView imageIcon;
+
+                public IntroSlideViewHolder(@NotNull View view) {
+                        super(view);
+                        this.textTitle = view.findViewById(R.id.textTitle);
+                        this.textDescription = (TextView)view.findViewById(R.id.textDescription);
+                        this.imageIcon = (ImageView)view.findViewById(R.id.imageSlideIcon);
+                }
+
+                public void bind(IntroSlide introSlide) {
+                        textTitle = introSlide.title;
+                        textDescription = introSlide.description;
+                        imageIcon.setImageResource(introSlide.icon);
+                }
         }
+}
