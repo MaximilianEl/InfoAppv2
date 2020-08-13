@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.fragment_ehelp.*
 import org.jsoup.Jsoup
 import kotlin.concurrent.thread
 
-class MenuActivity : AppCompatActivity() {
+class KotMenuActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 

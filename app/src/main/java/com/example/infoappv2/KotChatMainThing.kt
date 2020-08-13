@@ -12,7 +12,7 @@ import androidx.viewpager.widget.ViewPager
 import com.example.infoappv2.ui.chat.ChatFragment
 import kotlinx.android.synthetic.main.activity_chat.*
 
-class ChatMainThing : AppCompatActivity() {
+class KotChatMainThing : AppCompatActivity() {
 
     fun OnCreateView(
         savedInstanceState: Bundle

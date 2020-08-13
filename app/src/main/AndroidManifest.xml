@@ -13,11 +13,11 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".ui.ImprintInformations.ImprintInf"></activity>
         <activity
-            android:name=".MenuActivity"
+            android:name=".KotMenuActivity"
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".InfoActivity" />
-        <activity android:name=".StartScreenActivity">
+        <activity android:name=".KotInfoActivity" />
+        <activity android:name=".KotStartScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -7,8 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class IntroSlideAdapter(private val introSlides: List<IntroSlide>):
-    RecyclerView.Adapter<IntroSlideAdapter.IntroSlideViewHolder>() {
+class KotIntroSlideAdapter(private val introSlides: List<KotIntroSlide>):
+    RecyclerView.Adapter<KotIntroSlideAdapter.IntroSlideViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IntroSlideViewHolder {
         return IntroSlideViewHolder(
@@ -33,7 +33,7 @@ class IntroSlideAdapter(private val introSlides: List<IntroSlide>):
         private val textDescription = view.findViewById<TextView>(R.id.textDescription)
         private val imageIcon = view.findViewById<ImageView>(R.id.imageSlideIcon)
 
-        fun bind(introSlide: IntroSlide) {
+        fun bind(introSlide: KotIntroSlide) {
             textTitle.text = introSlide.title
             textDescription.text = introSlide.description
             imageIcon.setImageResource(introSlide.icon)

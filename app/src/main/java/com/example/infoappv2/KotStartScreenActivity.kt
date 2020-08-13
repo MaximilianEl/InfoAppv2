@@ -6,7 +6,7 @@ import android.os.Bundle
 import java.util.*
 import kotlin.concurrent.schedule
 
-class StartScreenActivity : AppCompatActivity() {
+class KotStartScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +17,7 @@ class StartScreenActivity : AppCompatActivity() {
 
     private fun openInfoActivity() {
         Timer().schedule(3000){
-             Intent(applicationContext, InfoActivity::class.java).also {
+             Intent(applicationContext, KotInfoActivity::class.java).also {
                  startActivity(it)
              }
         }

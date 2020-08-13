@@ -3,32 +3,30 @@ package com.example.infoappv2
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_info.*
 
-class InfoActivity : AppCompatActivity() {
+class KotInfoActivity : AppCompatActivity() {
 
-    private val introSlideAdapter = IntroSlideAdapter(
+    private val introSlideAdapter = KotIntroSlideAdapter(
         listOf(
-            IntroSlide(
+            KotIntroSlide(
                 "Willkommen am Campus Lingen!",
             "Die InfoApp der Hochschule Osnabrück bietet euch alle Informationen die Ihr zum Studienstart am Campus Lingen benötigt." +
                        "Außerdem bieten wir euch coole Spiele die Ihr spielen könnt während Ihr in der auf dem Campus wartet.",
                 R.drawable.hs_os
             ),
-            IntroSlide(
+            KotIntroSlide(
               "Alles was Du brauchst!",
                 "Hol dir Kontakte, Informationen, News und vieles mehr!",
                 R.drawable.firstimage
             ),
-            IntroSlide(
+            KotIntroSlide(
                 "Schreibe mit Dozenten!",
                 "Um mit Dozenten schreiben zu können muss eine Mobilfunknummer hinterlegt sein.",
                 R.drawable.ic_baseline_chat_24_white
@@ -54,14 +52,14 @@ class InfoActivity : AppCompatActivity() {
             if (introSliderViewPager.currentItem + 1 < introSlideAdapter.itemCount) {
                 introSliderViewPager.currentItem += 1
             }  else {
-                Intent(applicationContext, MenuActivity::class.java).also {
+                Intent(applicationContext, KotMenuActivity::class.java).also {
                     startActivity(it)
                     finish()
                 }
             }
         }
         textSkipIntro.setOnClickListener {
-            Intent(applicationContext, MenuActivity::class.java).also {
+            Intent(applicationContext, KotMenuActivity::class.java).also {
                 startActivity(it)
                 finish()
             }

@@ -10,7 +10,7 @@ import android.widget.TableLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
-import com.example.infoappv2.ChatMainThing
+import com.example.infoappv2.KotChatMainThing
 import com.example.infoappv2.R
 import kotlinx.android.synthetic.main.activity_chat.*
 
@@ -45,6 +45,6 @@ class ChatFragment : Fragment() {
 
         val tabLayout: TableLayout = activity.findViewById(R.id.tab_Layout)
         val viewPager: ViewPager = activity.findViewById(R.id.View_Pager)
-        val viewPagerAdapter = ChatMainThing.ViewPagerAdapter(activity.supportFragmentManager)
+        val viewPagerAdapter = KotChatMainThing.ViewPagerAdapter(activity.supportFragmentManager)
     }
 }

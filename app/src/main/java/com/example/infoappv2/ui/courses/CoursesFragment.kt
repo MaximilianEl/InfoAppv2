@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.SpannedString
+import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -45,24 +46,23 @@ class CoursesFragment : Fragment() {
                 cour_header1.setCompoundDrawablesWithIntrinsicBounds(0,0, R.drawable.ic_baseline_keyboard_arrow_up_24, 0)
                 cour_firstext.visibility = View.VISIBLE
 
-                cour_firstext.setOnClickListener{
-                    val openURL = Intent(Intent.ACTION_VIEW)
-                    openURL.data = Uri.parse("https://www.hs-osnabrueck.de/studium/studienangebot/bachelor/allgemeiner-maschinenbau-bsc-standort-lingen-ems/")
-                    startActivity(openURL)}
-//
-//                val styledStringA = SpannableString(
-//                    "Informationsseite "
-//                )
-//
-//                val clickableSpanA = object : ClickableSpan() {
-//                    override fun onClick(widget: View) {
-//                        val openURL = Intent(Intent.ACTION_VIEW)
-//                        openURL.data = Uri.parse("https://www.hs-osnabrueck.de/studium/studienangebot/bachelor/allgemeiner-maschinenbau-bsc-standort-lingen-ems/")
-//                        startActivity(openURL)
-//                    }
-//                }
-//
-//                styledStringA.setSpan(clickableSpanA, 0, 17, 0)
+//                cour_firstext.setOnClickListener{
+//                    val openURL = Intent(Intent.ACTION_VIEW)
+//                    openURL.data = Uri.parse("https://www.hs-osnabrueck.de/studium/studienangebot/bachelor/allgemeiner-maschinenbau-bsc-standort-lingen-ems/")
+//                    startActivity(openURL)}
+
+                val styledString = SpannableString(cour_firstext.text)
+
+                val clickableSpan1A = object : ClickableSpan() {
+                    override fun onClick(widget: View) {
+                        val openURL = Intent(Intent.ACTION_VIEW)
+                        openURL.data = Uri.parse("https://www.hs-osnabrueck.de/studium/studienangebot/bachelor/allgemeiner-maschinenbau-bsc-standort-lingen-ems/")
+                        startActivity(openURL)
+                    }}
+
+                styledString.setSpan(clickableSpan1A, 0, 16, 0)
+
+//                textView.setMovementMethod(LinkMovementMethod.getInstance())
 
             } else {
                 cour_header1.setCompoundDrawablesWithIntrinsicBounds(0,0, R.drawable.ic_baseline_keyboard_arrow_down_24, 0)
@@ -141,7 +141,7 @@ class CoursesFragment : Fragment() {
 
             val header = doc.select("span[class='az-item-title']")
 
-            activity?.runOnUiThread() {
+            activity?.runOnUiThread {
                 courheader.text = text.text()
                 cour_header1.text = header[0].text()
                 cour_header2.text = header[1].text()
